@@ -8,7 +8,9 @@
       <!-- <%= item.name %> -->
       <!-- </a> -->
       <!-- link_toは暗黙的にgetを呼び出している -->
-      <%= link_to '削除する', item_path(item), method: :delete %>
+      <%= link_to '編集する', edit_item_path(item) %>
+      <%= link_to '削除する', item_path(item), method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
   <% end %>
 </ul>
+      <%= link_to '新規登録', new_item_path %>
