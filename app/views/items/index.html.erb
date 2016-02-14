@@ -6,7 +6,9 @@
       <%= link_to item.name, item_path(item) %>
       <!-- <a href="./<%=item.id %>"> -->
       <!-- <%= item.name %> -->
-      </a>
+      <!-- </a> -->
+      <!-- link_toは暗黙的にgetを呼び出している -->
+      <%= link_to '削除する', item_path(item), method: :delete %>
     </li>
   <% end %>
 </ul>
